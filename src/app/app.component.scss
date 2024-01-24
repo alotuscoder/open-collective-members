@@ -1,0 +1,67 @@
+.collective-card {
+  margin-inline: 48px;
+  margin-block: 32px;
+  padding: 24px;
+  border: 1px solid black;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inline-padding { // Use this class to add inline padding of 48px to html elements 
+  padding-inline: 48px;
+}
+
+.primary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondary {
+  padding: 8px;
+}
+
+.primary, .secondary {
+  padding-inline: 12vw; // use different css units of measurements according to the scenario
+}
+
+.profile-details {
+  padding: 8px;
+  min-width: 160px;
+
+  div {
+    margin-bottom: 8px;
+  }
+}
+
+.additional-profile-details {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+
+  div {
+    margin-bottom: 8px;
+  }
+
+  .profile-description strong {
+    margin-right: 16px;
+  }
+}
+
+.transactions-details {
+    text-align: center;
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+    min-width: 320px;
+    max-width: 480px;
+
+    p {
+      display: inline;
+      font-weight: bold;
+      margin-right: 16px;
+    }
+}

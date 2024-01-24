@@ -1,0 +1,61 @@
+<h1 class="inline-padding">Browse webpack open collective's members</h1>
+<p class="inline-padding">This data is obtained from an open API.
+</p>
+<div class="inline-padding">Learn more about the source API  <a href="https://docs.opencollective.com/help/contributing/development/api"><strong>here</strong></a></div>
+<br>
+<div class="button-wrapper inline-padding">
+  <button (click)="retrieveData()">Retrieve members details</button>
+</div>
+
+<ng-container *ngFor="let item of membersDetails">
+  <div class="collective-card">
+
+    <div class="primary">
+      <div class="profile-details">
+        <h2>{{ item.name }}</h2>
+        <div>{{ item.company }}</div>
+        <div>{{ item.role }}</div>
+        <a [href]="item.profile"
+          ><img [src]="item.image" alt="" height="120px" width="120px"
+        /></a>
+      </div>
+      <div class="additional-profile-details">
+        <div class="profile-description ">
+          <div>{{ item.description }}</div>
+          <div><strong>Type of open collective</strong>{{ item.type.toUpperCase()}}</div>
+        </div>
+
+        <div class="transactions-details">
+          <div>
+            <p>Last transaction amount</p>
+            <span>{{
+              item.lastTransactionAmount | currency : item.currency
+            }}</span>
+          </div>
+          <div>
+            <p>Total amount donated</p>
+            <span>{{
+              item.totalAmountDonated | currency : item.currency
+            }}</span>
+          </div>
+          <div>
+            <p>Last transaction at</p>
+            <span>{{ item.lastTransactionAt | date }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondary">
+      <div class="additional-fields">
+        <div>
+          <strong>Website </strong
+          ><a [href]="item.website">{{ item.website }}</a>
+        </div>
+        <div>
+          <strong>GitHub </strong><a [href]="item.github">{{ item.github }}</a>
+        </div>
+      </div>
+    </div>
+  </div></ng-container
+>
