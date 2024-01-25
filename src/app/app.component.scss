@@ -47,7 +47,7 @@
   }
 
   .profile-description strong {
-    margin-right: 16px;
+    margin-right: 8px;
   }
 }
 
@@ -65,3 +65,18 @@
       margin-right: 16px;
     }
 }
+
+.logo {
+  text-align: center;
+  img {
+    width: 10%;
+    height: 10%;
+  }
+}
+
+.additional-fields {
+  .website {
+    margin-bottom: 16px;
+  }
+}
+

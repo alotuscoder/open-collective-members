@@ -10,7 +10,7 @@ export class MembersDataService {
   apiURL : string;
 
   constructor(private http : HttpClient) {
-    this.apiURL = 'https://opencollective.com/webpack/members/organizations.json?limit=50&offset=10';
+    this.apiURL = 'https://opencollective.com/mastodon/members/organizations.json?limit=50&offset=2';
   }
 
   getMembersData() : Observable<OpenSourceCollective[]> {
