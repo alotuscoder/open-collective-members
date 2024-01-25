@@ -40,25 +40,25 @@
           <div class="profile-description">
             <div><strong>About</strong>{{ item.description }}</div>
             <div>
-              <strong>Type of contributor</strong>{{ item.type.toUpperCase() }}
+              <strong>Type of Contributor</strong>{{ item.type.toUpperCase() }}
             </div>
           </div>
 
           <div class="transactions-details">
             <div>
-              <p>Last transaction amount</p>
-              <span>{{
-                item.lastTransactionAmount | currency : item.currency
-              }}</span>
-            </div>
-            <div>
-              <p>Total amount donated</p>
+              <p>Total Amount Donated</p>
               <span>{{
                 item.totalAmountDonated | currency : item.currency
               }}</span>
             </div>
             <div>
-              <p>Last transaction at</p>
+              <p>Last Transaction Amount</p>
+              <span>{{
+                item.lastTransactionAmount | currency : item.currency
+              }}</span>
+            </div>
+            <div id="last-transaction-item" class="margin-reset">
+              <p>Last Transaction On</p>
               <span>{{ item.lastTransactionAt | date }}</span>
             </div>
           </div>

@@ -46,8 +46,12 @@
     margin-bottom: 8px;
   }
 
-  .profile-description strong {
-    margin-right: 8px;
+  .profile-description {
+    margin-bottom: 24px;
+
+    strong {
+      margin-right: 8px;
+    }
   }
 }
 
@@ -80,3 +84,6 @@
   }
 }
 
+#last-transaction-item {
+  margin-bottom: 0px;
+}
