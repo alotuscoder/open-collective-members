@@ -35,26 +35,8 @@ export class AppComponent {
 
   retrieveData() {
     this.membersDataService.getMembersData().subscribe((membersData) => {
-      this.membersDetails = membersData;
-      this.sampleData = [
-        { key: 'MemberId', value: 1770 },
-        { key: 'company', value: null },
-        { key: 'createdAt', value: '2016-10-02 23:30' },
-        { key: 'currency', value: 'USD' },
-        { key: 'description', value: 'Non-profit fiscal host promoting a healthy and sustainable open source ecosystem.' },
-        { key: 'github', value: null },
-        { key: 'image', value: 'https://opencollective-production.s3.us-west-1.amazonaws.com/97017710-a90f-11e9-b6fb-2bbe7128f780.png' },
-        { key: 'isActive', value: true },
-        { key: 'lastTransactionAmount', value: -0.2 },
-        { key: 'lastTransactionAt', value: '2024-01-20 10:42' },
-        { key: 'name', value: 'Open Source Collective' },
-        { key: 'profile', value: 'https://opencollective.com/opensource' },
-        { key: 'role', value: 'HOST' },
-        { key: 'totalAmountDonated', value: 106.41 },
-        { key: 'twitter', value: 'https://twitter.com/OpenSourceColl' },
-        { key: 'type', value: 'ORGANIZATION' },
-        { key: 'website', value: 'https://oscollective.org/' }
-      ]
+      const unsortedList = membersData;
+        this.membersDetails = unsortedList.slice().sort((a, b) => b.totalAmountDonated - a.totalAmountDonated)
     });
   }
 }
